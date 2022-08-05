@@ -1,0 +1,24 @@
+{
+    "name": "discord-text-games-api",
+    "version": "0.0.1",
+    "description": "Discrod Text Games API TypeScript",
+    "license": "MIT",
+    "main": "./dist/index.js",
+    "types": "./index.ts",
+    "exports": {
+      ".": "./dist/index.js",
+      "./dto": "./dist/dto/index.js",
+      "./events": "./dist/events/index.js",
+      "./controls": "./dist/controls/index.js"
+    },
+    "scripts": {
+      "clean": "rimraf dist",
+      "prebuild": "npm run clean",
+      "build": "tsc"
+    },
+    "devDependencies": {
+      "typescript": "4.7.4",
+      "rimraf": "3.0.2"
+    }
+}
+  

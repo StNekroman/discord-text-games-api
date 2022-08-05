@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "target": "ES2020",
+        "rootDir": ".",
+        "outDir": "./dist/",
+        "module": "CommonJS",
+        "declaration": false,
+        "noImplicitAny": true,
+        "removeComments": true,
+        "moduleResolution": "node",
+        "allowJs": true,
+        "sourceMap": false,
+        "strictNullChecks": true,
+        "alwaysStrict": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "lib": ["ES2020"]
+    },
+    "include": [
+        "**/*.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "./build/**"
+    ]
+}
