@@ -11,3 +11,6 @@ How discord text game creation is done:
 4. When you have your JS files ready - you need to create game `package.json` file with information about the game. See [PackageJsonStructure](https://github.com/StNekroman/discord-text-games-api/blob/main/PackageJsonStructure.ts "PackageJsonStructure") interface, it describes all required and optional fields. You can combine you npm's package.json with game's package.json and hold all fields in one file.
 5. Now you need to pack you game plugin to ZIP archive. At root level of the archive there must be `package.json` file with game description. It must contain mandatory field `textGameEntryPoint` filled with path to main JS file (inside archive). If main game class is not exported via "default" export - then `textGameEntryPoint` additionally should contain name of the class in form: `app/app.js#NameOfMainClass`
 6. When your ZIP is ready - you can upload it to Discord server [**here**](https://discord.gg/RUH3mjHVEz "**here**")
+
+See other related repositores:
+- [discord-text-games-seed](https://github.com/StNekroman/discord-text-games-seed "discord-text-games-seed") Empty project, can be used as starting template.
