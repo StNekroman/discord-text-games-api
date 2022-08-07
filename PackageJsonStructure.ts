@@ -25,9 +25,12 @@ export interface PackageJsonStructure {
     languages : string[];
 
     /**
-     * If game supports multile joined users;
+     * How many concurrent players can be in the game session.
+     * 1 = for solo game,
+     * (1, unlim) = for limitings number of game players
+     * Default value (`undefined`) means unlimited count.
      */
-    multiplayer ?: boolean;
+    maxPlayers ?: number;
 
     /**
      * Path main game plugin's entry point file with class name after hash.
