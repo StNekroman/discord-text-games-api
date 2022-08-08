@@ -27,10 +27,10 @@ export interface GamePluginEntryPoint {
     /**
      * Lifecycle callback method, which will be invoked when service shutdown requested.
      * Place in this method saving of state (db) and/or releasing of all resources.
-     * @param saveBundle empty object to store there game state, variables, etc. Will be given in initialize() on session restoration.
-     * @return Promise to wait on before actual shutdown.
+     * @return Promise to wait on before actual shutdown. Optionally can return saveBundle with game state, variables, etc.
+     * If returned promise doesn't contain saveBundle (is undefined) - then corresponding data will be cleaned in db, if was present.
      */
-    destroy(saveBundle ?: Serializable) : Promise<void>;
+    destroy() : Promise<Serializable | void>;
 
     /**
      * Method to catch all incomming event from game system.

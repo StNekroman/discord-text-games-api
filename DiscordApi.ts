@@ -34,19 +34,32 @@ export interface DiscordApi {
      * @return descriptor of created messages
      * @see MessageDescriptor
      */
-    sendMessage(userId: string, text: string, options ?: DiscordApi.PostMessageOptions) : Promise<MessageDescriptor>;
+    sendMessageToUser(userId: string, text: string, options ?: DiscordApi.PostMessageOptions) : Promise<MessageDescriptor>;
 
     /**
-     * Sends message to common (for all game participants) channel or broadcast all all individual participants. 
-     * Final implementation depends on server config.
-     * @param userId id of user, to which send the message
+     * Creates custom text channel. No one will hass access to it, by default.
+     * @param name of new channel
+     * @return channel id
+     */
+    createChannel(name: string) : Promise<string>;
+
+    /**
+     * Grants permissions for user to see channel and, optionally, write messages there.
+     * @param userId id of the user to add
+     * @param channelId id of prviously created channel
+     * @param canWrite if true - user will be allowed to write messages there
+     */
+    addUserToChannel(userId: string, channelId: string, canWrite : boolean) : Promise<void>;
+
+    /**
+     * Sends message to previously created channel. 
      * @param text to send
-     * @param channelId optional id of the common channel, where to send the message. Used if there are many common channels. 
+     * @param channelId id of the channel, where to send the message. 
      * @param options optional additional controlling options
-     * @return descriptor of created messages or arrays of descriptor (when broadcast was to many individual channels)
+     * @return descriptor of created messages
      * @see MessageDescriptor
      */
-    sendCommonMessage(text: string, channelId ?: string, options ?: DiscordApi.PostMessageOptions) : Promise<MessageDescriptor|MessageDescriptor[]>;
+    sendMessage(text: string, channelId : string, options ?: DiscordApi.PostMessageOptions) : Promise<MessageDescriptor>;
 
     /**
      * Sends message to user in private channel
@@ -80,7 +93,7 @@ export interface DiscordApi {
      * Edits message (including controls).
      * @param channelId id of the channel, where the message sits.
      * @param messageId id of the message, which to edit.
-     * @param text new text payload
+     * @param text new text payload, max length is 2000
      * @param options optional additional controlling options
      */
     editMessage(channelId: string, messageId: string, text: string, options ?: DiscordApi.PostMessageOptions) : Promise<void>;

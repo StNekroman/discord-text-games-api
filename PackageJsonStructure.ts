@@ -1,4 +1,3 @@
-import { MessagesDeliveryMode } from "./MessagesDeliveryMode";
 
 /**
  * Interface describing set of fields, which are expected in game plugin package.json
@@ -40,8 +39,7 @@ export interface PackageJsonStructure {
     textGameEntryPoint: string;
 
     /**
-     * Currently only PRIVATE_THREAD_OR_CHANEL or COMMON_TEXT_CHANNEL are supported.
-     * If not specified - [PRIVATE_THREAD_OR_CHANEL] will be used by default.
+     * If true, any joining user will automatically receive private channel or thread for communication with game.
      */
-    messagesDeliveryMode ?: [MessagesDeliveryMode];
+    autoCreateUserChannels : boolean;
 }
