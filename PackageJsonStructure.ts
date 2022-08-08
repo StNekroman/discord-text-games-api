@@ -40,7 +40,8 @@ export interface PackageJsonStructure {
     textGameEntryPoint: string;
 
     /**
-     * Currently only one option supported, reserved for future.
+     * Currently only PRIVATE_THREAD_OR_CHANEL or COMMON_TEXT_CHANNEL are supported.
+     * If not specified - [PRIVATE_THREAD_OR_CHANEL] will be used by default.
      */
-    messagesDeliveryMode ?: MessagesDeliveryMode.PRIVATE_THREAD_OR_CHANEL;
+    messagesDeliveryMode ?: [MessagesDeliveryMode];
 }

@@ -61,9 +61,27 @@ export interface DiscordApi {
     /**
      * Enables/disabled control in message.
      * @param channelId id of the channel, where the message sits.
-     * @param messageId id of the message, which holds the button.
-     * @param controlId id of the control to enable or disable
+     * @param messageId id of the message, which holds the control.
+     * @param controlId id of the control to enable or disable.
      * @param enabled flag, true = enabled, false = disabled.
      */
     setControlEnabled(channelId: string, messageId: string, controlId: string, enabled: boolean) : Promise<void>;
+
+    /**
+     * Changes control in message to new.
+     * @param channelId id of the channel, where the message sits.
+     * @param messageId id of the message, which holds the control.
+     * @param controlId id of the control to replace.
+     * @param control new control to insert onstead of previous.
+     */
+    replaceControl(channelId: string, messageId: string, controlId: string, control: ComponentsInMessage) : Promise<void>;
+
+    /**
+     * Edits message (including controls).
+     * @param channelId id of the channel, where the message sits.
+     * @param messageId id of the message, which to edit.
+     * @param text new text payload
+     * @param options optional additional controlling options
+     */
+    editMessage(channelId: string, messageId: string, text: string, options ?: DiscordApi.PostMessageOptions) : Promise<void>;
 }
