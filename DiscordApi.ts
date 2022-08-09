@@ -44,6 +44,12 @@ export interface DiscordApi {
     createChannel(name: string) : Promise<string>;
 
     /**
+     * Deletes previously created channel.
+     * @param channelId id of the previously created channel to delete.
+     */
+    deleteChannel(channelId: string) : Promise<void>;
+
+    /**
      * Grants permissions for user to see channel and, optionally, write messages there.
      * @param userId id of the user to add
      * @param channelId id of prviously created channel

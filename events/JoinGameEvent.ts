@@ -11,7 +11,7 @@ export interface JoinGameEvent extends UserGameEvent<EventType.JOIN> {
     readonly isFirst : boolean;
 
     /**
-     * Id of the channel, which was created for user.
+     * Id of the channel, which was created for user, if was created.
      */
-    readonly channelId : string;
+    readonly channelId ?: string;
 }
