@@ -103,4 +103,11 @@ export interface DiscordApi {
      * @param options optional additional controlling options
      */
     editMessage(channelId: string, messageId: string, text: string, options ?: DiscordApi.PostMessageOptions) : Promise<void>;
+
+    /**
+     * Deletes own message
+     * @param channelId id of the channel, where the message sits.
+     * @param messageId id of the message to delete.
+     */
+    deleteMessage(channelId: string, messageId: string) : Promise<void>;
 }
