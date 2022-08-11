@@ -110,4 +110,18 @@ export interface DiscordApi {
      * @param messageId id of the message to delete.
      */
     deleteMessage(channelId: string, messageId: string) : Promise<void>;
+
+    /**
+     * Pins message in the channel.
+     * @param channelId id of the channel, where the message sits.
+     * @param messageId id of the message to pin.
+     */
+    pinMessage(channelId: string, messageId: string) : Promise<void>;
+
+    /**
+     * Unpins message in the channel.
+     * @param channelId id of the channel, where the message sits.
+     * @param messageId id of the message to unpin.
+     */
+    unpinMessage(channelId: string, messageId: string) : Promise<void>;
 }

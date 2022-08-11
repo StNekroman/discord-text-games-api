@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.TextInput = exports.TextInputStyle = exports.SelectOption = exports.SelectMenu = exports.ButtonStyle = exports.Button = exports.ActionRow = exports.ControlType = void 0;
+exports.SystemButtonIds = exports.TextInput = exports.TextInputStyle = exports.SelectOption = exports.SelectMenu = exports.ButtonStyle = exports.Button = exports.ActionRow = exports.ControlType = void 0;
 var ControlType_1 = require("./ControlType");
 Object.defineProperty(exports, "ControlType", { enumerable: true, get: function () { return ControlType_1.ControlType; } });
 var ActionRow_1 = require("./ActionRow");
@@ -17,3 +17,5 @@ var TextInputStyle_1 = require("./TextInputStyle");
 Object.defineProperty(exports, "TextInputStyle", { enumerable: true, get: function () { return TextInputStyle_1.TextInputStyle; } });
 var TextInput_1 = require("./TextInput");
 Object.defineProperty(exports, "TextInput", { enumerable: true, get: function () { return TextInput_1.TextInput; } });
+var SystemButtonIds_1 = require("./SystemButtonIds");
+Object.defineProperty(exports, "SystemButtonIds", { enumerable: true, get: function () { return SystemButtonIds_1.SystemButtonIds; } });

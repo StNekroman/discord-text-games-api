@@ -10,7 +10,7 @@ export type ComponentsInModal = Button | SelectMenu | TextInput;
 export class ActionRow<T extends ComponentsInMessage|ComponentsInModal> implements Control {
     public readonly type = ControlType.ACTION_ROW;
 
-    public components : T[];
+    public readonly components : T[];
 
     constructor(components : T[]) {
         const selects = components.filter(control => control.type === ControlType.SELECT_MENU);
