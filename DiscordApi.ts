@@ -58,6 +58,13 @@ export interface DiscordApi {
     addUserToChannel(userId: string, channelId: string, canWrite : boolean) : Promise<void>;
 
     /**
+     * Revokes permissions for user to see channel and write messages there.
+     * @param userId id of the user to revoke permissions for
+     * @param channelId id of prviously created channel
+     */
+    removeUserFromChannel(userId: string, channelId: string) : Promise<void>;
+
+    /**
      * Sends message to previously created channel. 
      * @param text to send
      * @param channelId id of the channel, where to send the message. 

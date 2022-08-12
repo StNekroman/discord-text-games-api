@@ -5,6 +5,9 @@ const ControlType_1 = require("./ControlType");
 class Button {
     constructor(options) {
         this.type = ControlType_1.ControlType.BUTTON;
+        if (options?.custom_id && options.custom_id.length > 100) {
+            throw "Button id must be less or equal than 100 characters.";
+        }
         this.style = options.style;
         this.label = options.label;
         this.emoji = options.emoji;
