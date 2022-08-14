@@ -5,7 +5,7 @@ import { Serializable } from "./Serializable";
 /**
  * Represents fields and methods, which are expected to be present in game plugin's entry point exported class
  */
-export interface GamePluginEntryPoint<S extends Serializable> {
+export interface GamePluginEntryPoint<S extends Serializable<S>> {
     /**
      * Discord API will be wired automatically after construction
      */

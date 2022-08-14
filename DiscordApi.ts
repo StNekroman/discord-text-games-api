@@ -19,6 +19,12 @@ export namespace DiscordApi {
          * Optional list with controls to attach to the message
          */
         components ?: ActionRow<ComponentsInMessage>[];
+
+        /**
+         * Optional list of files to attach.
+         * Each item can be Buffer with file content or string path to file.
+         */
+        files ?: (Buffer | string)[];
     }
 }
 

@@ -15,6 +15,7 @@
         "skipLibCheck": true,
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
+        "types": ["node"],
         "lib": ["ES2020"]
     },
     "include": [
