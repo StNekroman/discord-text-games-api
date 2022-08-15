@@ -14,4 +14,9 @@ export interface MessageGameEvent extends UserGameEvent<EventType.MESSAGE> {
      * Id of the channel, where message was created.
      */
     readonly channelId : string;
+
+    /**
+     * Optional array of pre-downloaded (to session dir) attachments, which message includes.
+     */
+    readonly attachments ?: string[];
 }
