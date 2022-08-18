@@ -94,10 +94,10 @@ export interface DiscordApi {
      * Enables/disabled control in message.
      * @param channelId id of the channel, where the message sits.
      * @param messageId id of the message, which holds the control.
-     * @param controlId id of the control to enable or disable.
+     * @param controlId id of the control to enable or disable or RegExp to match control(s)
      * @param enabled flag, true = enabled, false = disabled.
      */
-    setControlEnabled(channelId: string, messageId: string, controlId: string, enabled: boolean) : Promise<void>;
+    setControlEnabled(channelId: string, messageId: string, controlId: string|RegExp, enabled: boolean) : Promise<void>;
 
     /**
      * Changes control in message to new.
