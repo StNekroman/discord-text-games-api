@@ -94,7 +94,7 @@ export interface DiscordApi {
      * Enables/disabled control in message.
      * @param channelId id of the channel, where the message sits.
      * @param messageId id of the message, which holds the control.
-     * @param controlId id of the control to enable or disable or if controlId starts with "regexp:" - then part after : will be used to match controls.
+     * @param controlId id of the control to enable or disable. Supports glob-style wildcards (?, *) for matching many controls.
      * @param enabled flag, true = enabled, false = disabled.
      */
     setControlEnabled(channelId: string, messageId: string, controlId: string, enabled: boolean) : Promise<void>;
