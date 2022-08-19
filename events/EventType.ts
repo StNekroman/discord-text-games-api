@@ -8,3 +8,4 @@ export enum EventType {
 }
 
 export type UserEventTypes = Exclude<EventType, undefined>;
+export const UserEventTypes = [EventType.JOIN, EventType.LEAVE, EventType.MESSAGE, EventType.BUTTON_CLICK, EventType.SELECT_CHANGE];

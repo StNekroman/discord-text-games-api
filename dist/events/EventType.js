@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.EventType = void 0;
+exports.UserEventTypes = exports.EventType = void 0;
 var EventType;
 (function (EventType) {
     EventType[EventType["JOIN"] = 0] = "JOIN";
@@ -9,3 +9,4 @@ var EventType;
     EventType[EventType["BUTTON_CLICK"] = 3] = "BUTTON_CLICK";
     EventType[EventType["SELECT_CHANGE"] = 4] = "SELECT_CHANGE";
 })(EventType = exports.EventType || (exports.EventType = {}));
+exports.UserEventTypes = [EventType.JOIN, EventType.LEAVE, EventType.MESSAGE, EventType.BUTTON_CLICK, EventType.SELECT_CHANGE];
