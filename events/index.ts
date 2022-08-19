@@ -1,4 +1,4 @@
-export {EventType} from "./EventType";
+export {EventType, UserEventTypes} from "./EventType";
 export {GameEvent} from "./GameEvent";
 export {JoinGameEvent} from "./JoinGameEvent";
 export {LeaveGameEvent} from "./LeaveGameEvent";

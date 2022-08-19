@@ -6,3 +6,5 @@ export enum EventType {
     BUTTON_CLICK = 3,
     SELECT_CHANGE = 4
 }
+
+export type UserEventTypes = Exclude<EventType, undefined>;

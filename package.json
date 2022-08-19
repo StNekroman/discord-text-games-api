@@ -1,6 +1,6 @@
 {
     "name": "discord-text-games-api",
-    "version": "0.0.13",
+    "version": "0.0.14",
     "description": "Discrod Text Games API TypeScript",
     "license": "MIT",
     "main": "./dist/index.js",
