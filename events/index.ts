@@ -5,3 +5,4 @@ export {LeaveGameEvent} from "./LeaveGameEvent";
 export {MessageGameEvent} from "./MessageGameEvent";
 export {ButtonClickGameEvent} from "./ButtonClickGameEvent";
 export {SelectMenuChangedGameEvent} from "./SelectMenuChangedGameEvent";
+export {UserGameEvent} from "./UserGameEvent";
