@@ -3,7 +3,7 @@ import { Control } from "./Control";
 import { ControlType } from "./ControlType";
 import { Emoji } from "./Emoji";
 
-type ButtonConstructorOptions = {
+export type ButtonConstructorOptions = {
     style: ButtonStyle;
     label?: string; // text that appears on the button, max 80 characters
     emoji ?: Emoji;

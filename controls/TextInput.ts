@@ -2,7 +2,7 @@ import { Control } from "./Control";
 import { ControlType } from "./ControlType"
 import { TextInputStyle } from "./TextInputStyle";
 
-type TextInputConstructorOptions = {
+export type TextInputConstructorOptions = {
     custom_id: string; // a developer-defined identifier for the input, max 100 characters
     style: TextInputStyle; // the Text Input Style
     label: string; // the label for this component, max 45 characters

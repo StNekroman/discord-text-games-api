@@ -1,11 +1,11 @@
 export {ControlType} from "./ControlType";
 export {Emoji} from "./Emoji";
 export {ActionRow, ComponentsInMessage, ComponentsInModal} from "./ActionRow";
-export {Button} from "./Button";
+export {Button, ButtonConstructorOptions} from "./Button";
 export {ButtonStyle} from "./ButtonStyle";
-export {SelectMenu} from "./SelectMenu";
+export {SelectMenu, SelectMenuConstructorOptions} from "./SelectMenu";
 export {SelectOption} from "./SelectOption";
 export {TextInputStyle} from "./TextInputStyle";
-export {TextInput} from "./TextInput";
+export {TextInput, TextInputConstructorOptions} from "./TextInput";
 export {Control} from "./Control";
 export {SystemButtonIds} from "./SystemButtonIds";

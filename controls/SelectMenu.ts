@@ -2,7 +2,7 @@ import { Control } from "./Control";
 import { ControlType } from "./ControlType";
 import { SelectOption } from "./SelectOption";
 
-type SelectMenuConstructorOptions = {
+export type SelectMenuConstructorOptions = {
     custom_id : string; // a developer-defined identifier for the select menu, max 100 characters
     options: SelectOption[]; // array of select options	the choices in the select, max 25
     placeholder ?: string; // custom placeholder text if nothing is selected, max 150 characters
