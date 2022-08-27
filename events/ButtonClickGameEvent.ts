@@ -1,4 +1,5 @@
 import { EventType } from "./EventType";
+import { GameEvent } from "./GameEvent";
 import { UserGameEvent } from "./UserGameEvent";
 
 /**
@@ -19,4 +20,15 @@ export interface ButtonClickGameEvent extends UserGameEvent<EventType.BUTTON_CLI
      * Id of the channel, where message is located.
      */
     readonly channelId : string;
+}
+
+export namespace ButtonClickGameEvent {
+    /**
+     * Type-guard checked for ButtonClickGameEvent event type.
+     * @param event to check
+     * @returns true, if given event is ButtonClickGameEvent
+     */
+    export function isButtonClickGameEvent(event : GameEvent) : event is ButtonClickGameEvent {
+        return event.type === EventType.BUTTON_CLICK
+    }
 }
