@@ -1,4 +1,4 @@
-import { ActionRow, ButtonConstructorOptions, SelectMenuConstructorOptions } from "./controls";
+import { ActionRow, Button, SelectMenu } from "./controls";
 import { ComponentsInMessage } from "./controls/ActionRow";
 import { MessageDescriptor } from "./dto";
 
@@ -36,7 +36,7 @@ export namespace DiscordApi {
         /**
          * Object with options to modify. Can be any known control's property.
          */
-        options : Partial<ButtonConstructorOptions>|Partial<SelectMenuConstructorOptions>;
+        options : Partial<Button> & Partial<SelectMenu>;
     }
 }
 
