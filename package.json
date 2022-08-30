@@ -1,10 +1,17 @@
 {
     "name": "discord-text-games-api",
-    "version": "0.0.19",
+    "version": "0.0.20",
     "description": "Discrod Text Games API TypeScript",
     "license": "MIT",
     "main": "./dist/index.js",
     "types": "./index.ts",
+    "author": {
+      "name": "StNekroman",
+      "email": "StNekroman@gmail.com"
+    },
+    "repository": {
+      "url": "https://github.com/StNekroman/discord-text-games-api"
+    },
     "exports": {
       ".": "./dist/index.js",
       "./dto": "./dist/dto/index.js",

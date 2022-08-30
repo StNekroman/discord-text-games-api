@@ -31,8 +31,11 @@ export class Button implements Control {
     public disabled ?: boolean;
 
     constructor(options : ButtonConstructorOptions) {
-        if (options?.custom_id && options.custom_id.length > 100) {
+        if (options.custom_id && options.custom_id.length > 100) {
             throw "Button id must be less or equal than 100 characters.";
+        }
+        if (options.label && options.label.length > 80) {
+            options.label = options.label.substring(0, 77) + "...";
         }
 
         this.style = options.style;

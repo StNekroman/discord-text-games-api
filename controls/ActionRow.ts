@@ -13,6 +13,10 @@ export class ActionRow<T extends ComponentsInMessage|ComponentsInModal> implemen
     public readonly components : T[];
 
     constructor(components : T[]) {
+        if (!components || components.length === 0) {
+            throw "Empty components are not allowed for ActionRow.";
+        }
+
         const selects = components.filter(control => control.type === ControlType.SELECT_MENU);
         if (selects.length > 1) {
             throw "Only one select menu can be inside action row.";

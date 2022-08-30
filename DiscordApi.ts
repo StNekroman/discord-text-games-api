@@ -1,4 +1,4 @@
-import { ActionRow } from "./controls";
+import { ActionRow, ButtonConstructorOptions, SelectMenuConstructorOptions } from "./controls";
 import { ComponentsInMessage } from "./controls/ActionRow";
 import { MessageDescriptor } from "./dto";
 
@@ -25,6 +25,18 @@ export namespace DiscordApi {
          * Each item can be Buffer with file content or string path to file.
          */
         files ?: (Buffer | string)[];
+    }
+
+    export interface ModifyControlOptions {
+        /**
+         * Id of the control to modify. Supports glob-style wildcards (?, *) for matching many controls.
+         */
+        controlId: string;
+
+        /**
+         * Object with options to modify. Can be any known control's property.
+         */
+        options : Partial<ButtonConstructorOptions>|Partial<SelectMenuConstructorOptions>;
     }
 }
 
@@ -98,6 +110,14 @@ export interface DiscordApi {
      * @param enabled flag, true = enabled, false = disabled.
      */
     setControlEnabled(channelId: string, messageId: string, controlId: string, enabled: boolean) : Promise<void>;
+
+    /**
+     * Modifies existing control(s) in message via specifying set of properties to change.
+     * @param channelId id of the channel, where the message sits.
+     * @param messageId id of the message, which holds the control.
+     * @param options ordered array of patches/changes to apply.
+     */
+    modifyControls(channelId: string, messageId: string, options: DiscordApi.ModifyControlOptions[]) : Promise<void>;
 
     /**
      * Changes control in message to new.

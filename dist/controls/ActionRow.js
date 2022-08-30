@@ -5,6 +5,9 @@ const ControlType_1 = require("./ControlType");
 class ActionRow {
     constructor(components) {
         this.type = ControlType_1.ControlType.ACTION_ROW;
+        if (!components || components.length === 0) {
+            throw "Empty components are not allowed for ActionRow.";
+        }
         const selects = components.filter(control => control.type === ControlType_1.ControlType.SELECT_MENU);
         if (selects.length > 1) {
             throw "Only one select menu can be inside action row.";

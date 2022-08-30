@@ -12,6 +12,7 @@
         "sourceMap": false,
         "strictNullChecks": true,
         "alwaysStrict": true,
+        "strict": true,
         "skipLibCheck": true,
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
@@ -23,6 +24,6 @@
     ],
     "exclude": [
         "node_modules",
-        "./build/**"
+        "./dist/**"
     ]
 }
